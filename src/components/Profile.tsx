@@ -12,7 +12,7 @@ const Profile = () => {
           Kenny Feierstein
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 items-center bg-gray-100 dark:bg-gray-900 p-6 rounded-xl border-t-4 border-b-4 m-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 items-center bg-gray-100 dark:bg-gray-900 p-6 rounded-xl border-t-4 border-b-4 dark:border-gray-700 m-6">
         <Summary />
         <Picture />
       </div>
