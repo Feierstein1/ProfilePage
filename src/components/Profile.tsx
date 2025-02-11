@@ -49,9 +49,9 @@ const Summary = () => {
 const AccountLinks = () => {
   return (
     <>
-      <div className="!mt-5 flex justify-center sm:justify-start space-x-5 pb-5 sm:pb-0 ">
-        <a href="https://www.linkedin.com/in/kenneth-feierstein-4b5376115/" target="_blank"><FaLinkedin className={`text-5xl md:text-3xl lg:text-4xl transition duration-500 ease-in-out hover:scale-110 text-blue-500 hover:text-blue-600`} /></a>
-        <a href="https://github.com/Feierstein1" target="_blank"><FaGithub className={`text-5xl md:text-3xl lg:text-4xl transition duration-500 ease-in-out hover:scale-110 text-violet-500 hover:text-violet-600`} /></a>
+      <div className="!mt-5 flex justify-center sm:justify-start space-x-5 pb-5">
+        <a href="https://www.linkedin.com/in/kenneth-feierstein-4b5376115/" target="_blank"><FaLinkedin className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-blue-500 hover:text-blue-600`} /></a>
+        <a href="https://github.com/Feierstein1" target="_blank"><FaGithub className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-violet-500 hover:text-violet-600`} /></a>
         <ResumeLink/>
       </div>
     </>
@@ -62,7 +62,7 @@ const AccountLinks = () => {
 const ResumeLink = () => {
   return (
     <>
-      <a href="/resume" className="px-4 py-2 text-white bg-blue-600 rounded-full text-md transform transition duration-300 ease-in-out hover:bg-blue-800 
+      <a href="/resume" className="px-4 py-2 text-white bg-blue-600 rounded-full text-sm sm:text-md transform transition duration-300 ease-in-out hover:bg-blue-800 
       hover:scale-105  dark:bg-gray-600 dark:hover:bg-gray-800 ">
         <h2>View Resume</h2>
       </a>
