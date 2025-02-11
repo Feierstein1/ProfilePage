@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { MdSend } from 'react-icons/md';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -92,7 +93,7 @@ const ContactForm = () => {
 
   return (
     <div className="flex items-center justify-center dark:bg-gray-900 dark:text-white">
-      <div className="max-w-lg mx-auto p-6 bg-gray-200 dark:bg-gray-800 dark:text-white rounded-lg shadow-lg">
+      <div className="max-w-lg mx-auto p-6 bg-blue-200 dark:bg-gray-800 dark:text-white rounded-lg shadow-lg">
         <form onSubmit={handleSubmit} className="space-y-4">
           <input type="text" name="name" placeholder="Your Name" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.name} onChange={handleChange} />
           {nameError && <b className="text-red-800">{nameError}</b>}
@@ -100,10 +101,11 @@ const ContactForm = () => {
           {emailError && <b className="text-red-800">{emailError}</b>}
           <input type="text" name="subject" placeholder="Subject" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.subject} onChange={handleChange} />
           {subjectError && <b className="text-red-800">{subjectError}</b>}
-          <textarea name="message" placeholder="Your Message" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none" rows={5} value={formData.message} onChange={handleChange} />
+          <textarea name="message" placeholder="Your Message" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none resize-none" rows={5} value={formData.message} onChange={handleChange} />
           {messageError && <b className="text-red-800">{messageError}</b>}
           {!success && 
-          <button type="submit" disabled={loading} className="w-full text-white bg-blue-500 p-3 rounded hover:bg-blue-600 transition">
+          <button type="submit" disabled={loading} className="flex justify-center w-full text-white bg-blue-600 p-3 rounded hover:bg-blue-600 transition border-2 border-white dark:bg-gray-900">
+            <MdSend className="mr-2 mt-1"/>
             {loading ? "Sending..." : "Send Message"}
           </button>
           }

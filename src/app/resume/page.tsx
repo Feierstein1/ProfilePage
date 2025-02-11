@@ -121,7 +121,7 @@ const Experience = () => {
       <section>
         <h2 className={`${titleStyle}`}>Experience</h2>
         {experience.map(({ title, company, location, date, details }, index) => (
-          <div key={index} className="mt-4 bg-violet-800 p-6 rounded-xl">
+          <div key={index} className="mt-4 bg-violet-800 p-6 rounded-xl dark:bg-gray-800">
             <div className="flex justify-between">
               <h3 className="text-lg font-medium text-gray-200">{company}</h3>
               <p className="text-gray-200">{date}</p>
