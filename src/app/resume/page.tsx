@@ -12,7 +12,7 @@ const skills = [
 const experience = [
   {
     title: "Software Engineer",
-    company: "XCEL Solutions (an STC Company) ",
+    company: "XCEL Solutions",
     location: "Jacksonville, FL",
     date: "2014 - 2021",
     details: [

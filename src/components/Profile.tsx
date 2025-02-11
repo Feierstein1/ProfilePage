@@ -62,7 +62,7 @@ const AccountLinks = () => {
 const ResumeLink = () => {
   return (
     <>
-      <a href="/resume" className="inline-block px-4 py-2 text-white bg-blue-600 rounded-full text-lg font-semibold transform transition duration-300 ease-in-out hover:bg-cyan-500 hover:scale-105 hover:text-white">
+      <a href="/resume" className="inline-block px-4 py-2 text-white bg-blue-600 rounded-full text-lg font-semibold transform transition duration-300 ease-in-out hover:bg-blue-800 hover:scale-105 hover:text-white border-r-2 border-l-2 border-b-2 border-blue-300">
         View Resume
       </a>
     </>

@@ -1,13 +1,16 @@
-"use client";
+import ContactForm from '../../components/ContactForm';
 
 const Contact = () => {
   return (
-    <div className="max-w-4xl mx-auto bg-white dark:bg-gray-900 shadow-lg rounded-lg p-8 space-y-6 border border-gray-300 dark:border-gray-700">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Contact Me</h1>
-      </div>    
-    </div>
+    <section className="flex justify-center">
+      <div className="flex flex-col items-center text-center p-4 space-y-4 max-w-lg w-full">
+        <h1 className="text-2xl font-bold">Contact Me</h1>
+        <p className="text-gray-600">Feel free to email me about potential opportunities.</p>
+        <ContactForm />
+      </div>
+    </section>
   );
 };
+
 
 export default Contact;
