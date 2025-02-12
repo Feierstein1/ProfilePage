@@ -1,9 +1,6 @@
 "use client";
 
-interface StackListProps {
-  arr: string[];
-  color: string;
-}
+import {StackList} from "../../components/utils"
 
 const skills = [
   "JavaScript", "React", "Node.js", "TypeScript", "MongoDB", "TailwindCSS", "Postgre", "Firebase", "BootStrap", "MUI", "HTML", "CSS", "GIT"
@@ -60,12 +57,12 @@ const experience = [
 ]
 
 // Style sets
-const titleStyle = 'text-xl text-blue-500  tracking-widest font-semibold  border-b pb-2'
+const titleStyle = 'text-xl text-blue-500 tracking-widest font-semibold  border-b pb-2'
 
 const Resume = () => {
   return (
 
-      <div className="max-w-4xl mx-auto bg-white dark:bg-gray-900 shadow-lg rounded-lg p-8 space-y-6 border-t-4 border-b-4 border-gray-300 dark:border-gray-700">
+      <div className="max-w-4xl p-8 mx-auto space-y-6 bg-white rounded-lg shadow-lg dark:bg-gray-900 border-brackets">
       {/* Header Section */}
       <Header/>
 
@@ -88,8 +85,8 @@ const Header = () => {
   return (
     <>
       <div className="text-center">
-        <h1 className="text-3xl tracking-widest font-bold text-gray-900 dark:text-gray-100">Kenny Feierstein</h1>
-        <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-300">
+        <h1 className="text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100">Kenny Feierstein</h1>
+        <p className="text-sm text-gray-600 sm:text-lg dark:text-gray-300">
           Software Engineer <b className="text-blue-500">| </b> 
           Agile Experience <b className="text-blue-500">| </b> 
           Full Stack <b className="text-blue-500">| </b> 
@@ -105,7 +102,7 @@ const Summary = () => {
     <>
       <section>
         <h2 className={`${titleStyle}`}>Summary</h2>
-        <p className="text-gray-700 dark:text-gray-300 mt-4">
+        <p className="mt-4 text-gray-700 dark:text-gray-300">
           <b className="tracking-widest">SOFTWARE ENGINEER (FULL STACK)</b> with extensive experience developing and maintaining technical systems in Agile environments. 
           Skilled in synthesizing complex information, collaborating with cross-functional teams, and delivering solutions that achieve key performance indicators. 
           Proven ability to excel in autonomous and remote work settings while leveraging front-end, back-end, and server-side technologies.
@@ -121,7 +118,7 @@ const Experience = () => {
       <section>
         <h2 className={`${titleStyle}`}>Experience</h2>
         {experience.map(({ title, company, location, date, details }, index) => (
-          <div key={index} className="mt-4 bg-violet-800 p-6 rounded-xl dark:bg-gray-800">
+          <div key={index} className="p-6 mt-4 bg-violet-800 rounded-xl dark:bg-gray-800">
             <div className="flex justify-between">
               <h3 className="text-lg font-medium text-gray-200">{company}</h3>
               <p className="text-gray-200">{date}</p>
@@ -130,7 +127,7 @@ const Experience = () => {
               <p className="text-gray-200">{title}</p>
               <p className="text-gray-200">{location}</p> 
             </div>
-            <ul className="list-none list-outside pl-6 text-gray-300 mt-2">
+            <ul className="pl-6 mt-2 text-gray-300 list-none list-outside">
               {details.map(({text, stack}, i) =>  (
                 <li key={i} className="pb-4 relative pl-6 before:absolute before:left-0 before:top-1 before:text-blue-500 before:content-['\2726']">
                   {text}
@@ -167,7 +164,7 @@ const Education = () => {
     <section>
         <h2 className={`${titleStyle}`}>Education</h2>
         <div className="flex justify-start">
-        <img src="/unf.png" alt="Your Name" className="mt-3 mr-3 w-20 h-20 rounded-lg border-4 border-white-500 " />
+        <img src="/unf.png" alt="UNF Logo" className="w-20 h-20 mt-3 mr-3 border-4 rounded-lg border-white-500 " />
         <div className="mt-4">
           <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Bachelor of Science</h3>
           <h2>Information Science (Computer Science Program)</h2>
@@ -178,18 +175,5 @@ const Education = () => {
     </>
   )
 }
-
-const StackList = ({ arr, color }: StackListProps) => {
-  return (
-    <>
-      {arr.map((skill, index) => (
-        <span key={index} className={`${color} text-white text-sm px-3 py-1 p-2 rounded-full`}>
-          {skill}
-        </span>
-      ))}
-    </>
-  )
-}
-
 
 export default Resume;

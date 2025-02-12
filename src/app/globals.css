@@ -19,7 +19,14 @@
 }
 
 body {
-  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  @apply text-gray-900 bg-white dark:bg-gray-900 dark:text-gray-100;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+.border-brackets {
+  @apply border-t-4 border-b-4 rounded-xl dark:border-gray-700
+}
+
+.border-brackets-horz {
+  @apply border-l-4 border-r-4 rounded-xl dark:border-gray-700
+}

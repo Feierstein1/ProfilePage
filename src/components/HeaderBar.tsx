@@ -27,7 +27,7 @@ const HeaderBar = () => {
                     isVisible ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <nav className="container mx-auto flex justify-center">
+                <nav className="container flex justify-center mx-auto">
                     <ul className="flex gap-2 pt-1">
                         <li><a href="/" className={`${style}`}>Home</a></li>
                         <li><a href="/projects" className={`${style}`}>Projects</a></li>

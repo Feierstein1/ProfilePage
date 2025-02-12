@@ -8,11 +8,11 @@ const Profile = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex justify-center">
-        <h2 className="text-3xl font-bold text-gray-white tracking-widest transform transition-all duration-500 ease-in-out hover:scale-110 hover:text-blue-500">
+        <h2 className="text-3xl font-bold tracking-widest transition-all duration-500 ease-in-out transform text-gray-white hover:scale-110 hover:text-blue-500">
           Kenny Feierstein
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 items-center bg-gray-100 dark:bg-gray-900 p-6 rounded-xl border-t-4 border-b-4 dark:border-gray-700 m-6">
+      <div className="grid items-center grid-cols-1 p-6 m-6 bg-gray-100 sm:grid-cols-1 md:grid-cols-2 dark:bg-gray-900 border-brackets">
         <Summary />
         <Picture />
       </div>
@@ -25,8 +25,8 @@ const Profile = () => {
 const Picture = () => {
   return (
     <div className="flex justify-center">
-      <div className="w-48 h-56  overflow-hidden rounded-lg">
-        <img src="/profilePic.png" alt="Your Name" className="w-full h-full object-cover hover:w-38 transition-all ease-in-out " />
+      <div className="w-48 h-56 overflow-hidden rounded-lg">
+        <img src="/profilePic.png" alt="Your Name" className="object-cover w-full h-full transition-all ease-in-out hover:w-38 " />
       </div>
     </div>
   );
@@ -35,7 +35,7 @@ const Picture = () => {
 // Summary Component
 const Summary = () => {
   return (
-    <div className="text-center md:text-left space-y-8">
+    <div className="space-y-8 text-center md:text-left">
       <p className="text-lg text-gray-700 dark:text-gray-300">
         Software Engineer with experience in full-stack development using Node.js. 
         Skilled in building scalable applications and collaborating in Agile, remote work environments.
@@ -62,8 +62,7 @@ const AccountLinks = () => {
 const ResumeLink = () => {
   return (
     <>
-      <a href="/resume" className="px-4 py-2 text-white bg-blue-600 rounded-full text-sm sm:text-md transform transition duration-300 ease-in-out hover:bg-blue-800 
-      hover:scale-105  dark:bg-gray-600 dark:hover:bg-gray-800 ">
+      <a href="/resume" className="px-4 py-2 text-sm text-white transition duration-300 ease-in-out transform bg-blue-600 rounded-full sm:text-md hover:bg-blue-800 hover:scale-105 dark:bg-gray-600 dark:hover:bg-gray-800 ">
         <h2>View Resume</h2>
       </a>
     </>
@@ -88,7 +87,7 @@ const TechStack = () => {
       {stackArr.map(({ type, icon: Icon, color }, index) => (
         <div key={index} className="flex flex-col items-center">
           <Icon className={`text-5xl md:text-3xl lg:text-4xl transition ${color}`} />
-          <p className="mt-2 hidden lg:block">{type}</p>
+          <p className="hidden mt-2 lg:block">{type}</p>
         </div>
       ))}
     </div>
