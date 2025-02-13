@@ -54,8 +54,8 @@ const ProjectListItem = ({ proj }) => {
   const { title, image, url, description, descriptionList, stack } = proj;
 
   return (
-    <div key={title} className="flex p-4 border-brackets-horz">
-      <div className="w-1/5">
+    <div key={title} className="flex flex-col justify-between p-4 md:flex-row border-brackets-horz">
+      <div>
         {image && (
           <a href={url || "#"} target="_blank" rel="noopener noreferrer">
             <img src={image} alt={title} className="w-32 h-32 mt-3 mb-3 border-4 border-gray-500 rounded-lg" />

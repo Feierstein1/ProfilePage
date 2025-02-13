@@ -9,7 +9,6 @@ const Contact = () => {
           <MdEmail className="mt-1 mr-2"/>
           Contact Me
         </h1>
-        
         <ContactForm />
       </div>
     </section>

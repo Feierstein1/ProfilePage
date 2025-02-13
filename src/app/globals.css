@@ -30,3 +30,7 @@ body {
 .border-brackets-horz {
   @apply border-l-4 border-r-4 rounded-xl dark:border-gray-700
 }
+
+.full-border {
+  @apply border-4 rounded-xl dark:border-gray-700
+}
