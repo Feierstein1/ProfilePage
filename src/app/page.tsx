@@ -4,7 +4,7 @@ import Profile from '../components/profile/ProfileNew'
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center p-4 space-y-6">
+    <div className="flex flex-col items-centerspace-y-6">
         <Profile/>
     </div>
   );

@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Press+Start+2P&family=Saira+Stencil+One&family=Nunito:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +6,16 @@
 
 
 :root {
-  /* Light Mode Colors */
+  /* Light Mode (Default) */
+
+  --vaporwave-pink: #ff71ce;
+  --vaporwave-purple: #b967ff;
+  --vaporwave-blue: #01cdfe;
+  --vaporwave-cyan: #05ffa1;
+  --vaporwave-yellow: #fffb96;
+
+  --bg-gradient: linear-gradient(to bottom right, var(--vaporwave-pink), var(--vaporwave-blue), var(--vaporwave-purple));
+
   --color-bg: #f8f3f8;
   --color-text: #3a2e39;
   --color-primary: #ff71ce;
@@ -16,31 +24,48 @@
   --color-title: #8338ec;
   --color-button-bg: #ff71ce;
   --color-button-text: #fff;
+
+  --font-title: 'Saira Stencil One', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-mono: 'Press Start 2P', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #1a1a2e;
-      --color-text: #e0aaff;
-      --color-primary: #ff71ce;
-      --color-secondary: #01cdfe;
-      --color-accent: #05ffa1;
-      --color-title: #ff9f1c;
-      --color-button-bg: #ff71ce;
-      --color-button-text: #1a1a2e;
-    }
+/* DARK MODE */
+.dark {
+
+  --vaporwave-pink: #701450;
+  --vaporwave-purple: #36075f;
+  --vaporwave-blue: #125c6e;
+  --vaporwave-cyan: #0f5238;
+  --vaporwave-yellow: #aca95e;
+
+  --bg-gradient: linear-gradient(to bottom right, var(--vaporwave-pink), var(--vaporwave-blue), var(--vaporwave-purple));
+
+  --color-bg: #1a1a2e;
+  --color-text: #e0aaff;
+  --color-primary: #ff71ce;
+  --color-secondary: #01cdfe;
+  --color-accent: #05ffa1;
+  --color-title: #ff9f1c;
+  --color-button-bg: #ff71ce;
+  --color-button-text: #1a1a2e;
+}
+
+.bg-vaporwave-gradient {
+  background: linear-gradient(to bottom right, var(--vaporwave-blue), var(--vaporwave-purple), var(--vaporwave-pink));
 }
 
 body {
-  background-color: var(--color-bg);
+  background-color: var(--bg-gradient);
   color: var(--color-text);
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
 }
 
 h1,
 h2,
 h3 {
   color: var(--color-title);
+  font-family: var(--font-title);
 }
 
 button {
@@ -55,3 +80,28 @@ button:hover {
   background-color: var(--color-accent);
 }
 
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+/* Vaporwave Colors */
+.text-vaporwave-pink {
+  color: var(--vaporwave-pink);
+}
+
+.text-vaporwave-purple {
+  color: var(--vaporwave-purple);
+}
+
+.text-vaporwave-blue {
+  color: var(--vaporwave-blue);
+}
+
+.text-vaporwave-cyan {
+  color: var(--vaporwave-cyan);
+}
+
+.text-vaporwave-yellow {
+  color: var(--vaporwave-yellow);
+}
