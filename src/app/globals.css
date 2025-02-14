@@ -7,30 +7,51 @@
 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Mode Colors */
+  --color-bg: #f8f3f8;
+  --color-text: #3a2e39;
+  --color-primary: #ff71ce;
+  --color-secondary: #01cdfe;
+  --color-accent: #05ffa1;
+  --color-title: #8338ec;
+  --color-button-bg: #ff71ce;
+  --color-button-text: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --color-bg: #1a1a2e;
+      --color-text: #e0aaff;
+      --color-primary: #ff71ce;
+      --color-secondary: #01cdfe;
+      --color-accent: #05ffa1;
+      --color-title: #ff9f1c;
+      --color-button-bg: #ff71ce;
+      --color-button-text: #1a1a2e;
+    }
 }
 
 body {
-  @apply text-gray-900 bg-white dark:bg-gray-900 dark:text-gray-100;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-.border-brackets {
-  @apply border-t-4 border-b-4 rounded-xl dark:border-gray-700
+h1,
+h2,
+h3 {
+  color: var(--color-title);
 }
 
-.border-brackets-horz {
-  @apply border-l-4 border-r-4 rounded-xl dark:border-gray-700
+button {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.full-border {
-  @apply border-4 rounded-xl dark:border-gray-700
+button:hover {
+  background-color: var(--color-accent);
 }
+
