@@ -53,7 +53,7 @@ const Profile = () => {
 const Picture = () => {
   return (
     <div className="flex justify-center">
-      <div className="w-48 h-56 overflow-hidden rounded-lg">
+      <div className="w-32 overflow-hidden rounded-lg h-42 md:w-48 md:h-56">
         <img src="/profilePic.png" alt="Your Name" className="object-cover w-full h-full transition-all ease-in-out hover:w-38 " />
       </div>
     </div>
