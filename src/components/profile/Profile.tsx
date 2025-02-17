@@ -3,20 +3,48 @@
 import React from "react";
 import { FaJs, FaReact, FaNodeJs, FaDatabase, FaFire, FaGitAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
+import CatInteraction from './CatInteraction';
 
 const Profile = () => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="flex justify-center">
-        <h2 className="text-3xl font-bold tracking-widest transition-all duration-500 ease-in-out transform text-gray-white hover:scale-110 hover:text-blue-500">
-          Kenny Feierstein
-        </h2>
+    <div className="pt-14 bg-vaporwave-gradient">
+      <CatInteraction />
+      <div id="container" className="flex flex-col w-full max-w-4xl p-8 mx-auto space-y-8 ">
+        {/* Tech Stack */}
+        <TechStack />
+        {/* Section with Profile Information */}
+        <section className="flex flex-col items-center justify-center w-full p-8 ">
+          {/* Container with smaller size and background */}
+          <div className="w-full p-8 border-4 rounded-lg shadow-xl bg-vaporwave_light_yellow border-vaporwave_dark_pink dark:bg-vaporwave_dark_blue">
+            <div className="flex flex-col items-center justify-center md:flex-row">
+              {/* Left Side - Profile Image */}
+              <div className="flex justify-center w-full p-5 md:justify-end md:w-1/2">
+                <img
+                  src="/profilePic.png" 
+                  alt="Profile Picture"
+                  width={300}
+                  height={300}
+                  className="border-4 rounded-full shadow-xl"
+                />
+              </div>
+
+              {/* Right Side - Text */}
+              <div className="flex flex-col items-center w-full mt-8 text-center md:w-1/2 md:items-start md:text-left md:mt-0">
+                <h1 className="text-4xl font-bold md:text-6xl text-title1 font-saira">
+                  Hello, I'm
+                  <p className="text-4xl font-bold md:text-6xl text-title2 font-saira">KENNY FEIERSTEIN</p>
+                </h1>
+                {/* Account Links */}
+                <AccountLinks />
+                <p className="max-w-md mt-4 text-lg md:text-xl text-bodyText1">
+                  Software Engineer with experience in full-stack development using Node.js. 
+                  Skilled in building scalable applications and collaborating in Agile, remote work environments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <div className="grid items-center grid-cols-1 p-6 m-6 bg-gray-100 sm:grid-cols-1 md:grid-cols-2 dark:bg-gray-900 border-brackets">
-        <Summary />
-        <Picture />
-      </div>
-      <TechStack />
     </div>
   );
 };
@@ -45,11 +73,11 @@ const Summary = () => {
   );
 };
 
-//LinkedIn and Github links Component
+// LinkedIn and Github links Component
 const AccountLinks = () => {
   return (
     <>
-      <div className="!mt-5 flex justify-center sm:justify-start space-x-5 pb-5">
+      <div className="!mt-3 flex justify-center sm:justify-start space-x-5 p-4  bg-white dark:bg-black border-0 rounded-full shadow-xl">
         <a href="https://www.linkedin.com/in/kenneth-feierstein-4b5376115/" target="_blank"><FaLinkedin className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-blue-500 hover:text-blue-600`} /></a>
         <a href="https://github.com/Feierstein1" target="_blank"><FaGithub className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-violet-500 hover:text-violet-600`} /></a>
         <ResumeLink/>
@@ -58,12 +86,12 @@ const AccountLinks = () => {
   )
 }
 
-//Resume Link Component
+// Resume Link Component
 const ResumeLink = () => {
   return (
     <>
-      <a href="/resume" className="px-4 py-2 text-sm text-white transition duration-300 ease-in-out transform bg-blue-600 rounded-full sm:text-md hover:bg-blue-800 hover:scale-105 dark:bg-gray-600 dark:hover:bg-gray-800 ">
-        <h2>View Resume</h2>
+      <a href="/resume" className="p-2 text-white rounded-full bg-vaporwave_blue hover:bg-vaporwave_dark_blue dark:bg-vaporwave_dark_pink dark:hover:bg-vaporwave_pink">
+        <b>View Resume</b>
       </a>
     </>
   )
@@ -71,7 +99,6 @@ const ResumeLink = () => {
 
 // Tech Stack Component with Auto Scrolling
 const TechStack = () => {
-
   const stackArr = [
     { type: "JavaScript", icon: FaJs, color: "text-yellow-500 hover:text-yellow-600" },
     { type: "React", icon: FaReact, color: "text-blue-500 hover:text-blue-600" },

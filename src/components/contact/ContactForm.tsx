@@ -92,20 +92,20 @@ const ContactForm = () => {
 
 
   return (
-    <div className="flex items-center justify-center dark:bg-gray-900 dark:text-white">
-      <div className="max-w-lg mx-auto p-6 bg-blue-200 dark:bg-gray-800 dark:text-white rounded-lg shadow-lg">
+    <div className="flex items-center justify-center border-2 border-vaporwave_dark_pink rounded-xl dark:bg-gray-900 dark:text-white">
+      <div className="max-w-lg p-6 mx-auto rounded-lg shadow-lg bg-vaporwave_light_blue dark:bg-gray-800 dark:text-white">
         <form onSubmit={handleSubmit} className="space-y-4">
-          <input type="text" name="name" placeholder="Your Name" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.name} onChange={handleChange} />
+          <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.name} onChange={handleChange} />
           {nameError && <b className="text-red-800">{nameError}</b>}
-          <input type="email" name="email" placeholder="Your Email" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.email} onChange={handleChange} />
+          <input type="email" name="email" placeholder="Your Email" required className="w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.email} onChange={handleChange} />
           {emailError && <b className="text-red-800">{emailError}</b>}
-          <input type="text" name="subject" placeholder="Subject" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.subject} onChange={handleChange} />
+          <input type="text" name="subject" placeholder="Subject" required className="w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.subject} onChange={handleChange} />
           {subjectError && <b className="text-red-800">{subjectError}</b>}
-          <textarea name="message" placeholder="Your Message" required className=" w-full p-3 rounded dark:bg-gray-700 focus:outline-none resize-none" rows={5} value={formData.message} onChange={handleChange} />
+          <textarea name="message" placeholder="Your Message" required className="w-full p-3 rounded resize-none dark:bg-gray-700 focus:outline-none" rows={5} value={formData.message} onChange={handleChange} />
           {messageError && <b className="text-red-800">{messageError}</b>}
           {!success && 
-          <button type="submit" disabled={loading} className="flex justify-center w-full text-white bg-blue-600 p-3 rounded hover:bg-blue-600 transition border-2 border-white dark:bg-gray-900">
-            <MdSend className="mr-2 mt-1"/>
+          <button type="submit" disabled={loading} className="flex justify-center w-full p-3 text-white transition border-2 border-white rounded bg-vaporwave_pink hover:bg-vaporwave_dark_pink dark:bg-gray-900">
+            <MdSend className="mt-1 mr-2"/>
             {loading ? "Sending..." : "Send Message"}
           </button>
           }
@@ -119,7 +119,7 @@ const ContactForm = () => {
 
 const SuccessfulMessage = () => {
   return (
-      <div className="flex justify-center bg-green-600 p-2 mb-4 border-2 border-green-800 ">
+      <div className="flex justify-center p-2 mb-4 bg-green-600 border-2 border-green-800 ">
         <h2 className="text-white">Email Successfull Sent!</h2>
       </div>
   )

@@ -1,6 +1,6 @@
 // profile.tsx
 import React from 'react';
-import Profile from '../components/profile/ProfileNew'
+import Profile from '../components/profile/Profile'
 
 const Home = () => {
   return (

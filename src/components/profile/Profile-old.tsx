@@ -3,36 +3,21 @@
 import React from "react";
 import { FaJs, FaReact, FaNodeJs, FaDatabase, FaFire, FaGitAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
-import CatInteraction from './CatInteraction';
 
 const Profile = () => {
   return (
-    <>
-    <CatInteraction />
-    <section className="flex flex-col items-center justify-center w-full h-screen p-8 md:flex-row bg-vaporwave-gradient">
-      {/* Left Side - Profile Image */}
-      <div className="flex justify-center w-full md:w-1/2">
-        <img
-          src="/profilePic.png" 
-          alt="Profile Picture"
-          width={300}
-          height={300}
-          className="border-4 rounded-full shadow-xl border-vaporwave-cyan"
-        />
+    <div className="max-w-4xl mx-auto">
+      <div className="flex justify-center">
+        <h2 className="text-3xl font-bold tracking-widest transition-all duration-500 ease-in-out transform text-gray-white hover:scale-110 hover:text-blue-500">
+          Kenny Feierstein
+        </h2>
       </div>
-
-      {/* Right Side - Text */}
-      <div className="flex flex-col items-center w-full mt-8 text-center md:w-1/2 md:items-start md:text-left md:mt-0">
-        <h1 className="text-4xl font-bold md:text-6xl text-vaporwave-yellow">
-          Hello, my name is Kenny Feierstein
-        </h1>
-        <p className="max-w-md mt-4 text-lg md:text-xl text-vaporwave-cyan">
-          Software Engineer with experience in full-stack development using Node.js. 
-          Skilled in building scalable applications and collaborating in Agile, remote work environments.
-        </p>
+      <div className="grid items-center grid-cols-1 p-6 m-6 bg-gray-100 sm:grid-cols-1 md:grid-cols-2 dark:bg-gray-900 border-brackets">
+        <Summary />
+        <Picture />
       </div>
-    </section>
-    </>
+      <TechStack />
+    </div>
   );
 };
 
@@ -77,7 +62,7 @@ const AccountLinks = () => {
 const ResumeLink = () => {
   return (
     <>
-      <a href="/resume" className="px-4 py-2 text-sm">
+      <a href="/resume" className="px-4 py-2 text-sm text-white transition duration-300 ease-in-out transform bg-blue-600 rounded-full sm:text-md hover:bg-blue-800 hover:scale-105 dark:bg-gray-600 dark:hover:bg-gray-800 ">
         <h2>View Resume</h2>
       </a>
     </>

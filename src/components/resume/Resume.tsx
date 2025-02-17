@@ -61,23 +61,27 @@ const titleStyle = 'text-xl text-blue-500 tracking-widest font-semibold  border-
 
 const Resume = () => {
   return (
+      <div className="pt-14 bg-vaporwave-gradient">
+        <div id="container" className="flex flex-col w-full max-w-4xl p-8 mx-auto space-y-8 ">
 
-      <div className="max-w-4xl p-8 mx-auto space-y-6 bg-white rounded-lg shadow-lg dark:bg-gray-900 border-brackets">
-      {/* Header Section */}
-      <Header/>
+          <div className="max-w-4xl p-8 mx-auto space-y-6 bg-white border-2 rounded-lg shadow-lg border-vaporwave_dark_pink dark:bg-gray-900">
+            {/* Header Section */}
+            <Header/>
 
-      {/* Summary Section */}
-      <Summary/>
+            {/* Summary Section */}
+            <Summary/>
 
-      {/* Experience Section */}
-      <Experience/>
+            {/* Experience Section */}
+            <Experience/>
 
-      {/* Education Section */}
-      <Education/>
+            {/* Education Section */}
+            <Education/>
 
-      {/* Skills Section */}
-      <Skills/>
-    </div>
+            {/* Skills Section */}
+            <Skills/>
+          </div>
+        </div>
+      </div>
   );
 };
 

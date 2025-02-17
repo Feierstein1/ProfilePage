@@ -8,76 +8,101 @@
 :root {
   /* Light Mode (Default) */
 
-  --vaporwave-pink: #ff71ce;
-  --vaporwave-purple: #b967ff;
-  --vaporwave-blue: #01cdfe;
-  --vaporwave-cyan: #05ffa1;
-  --vaporwave-yellow: #fffb96;
-
-  --bg-gradient: linear-gradient(to bottom right, var(--vaporwave-pink), var(--vaporwave-blue), var(--vaporwave-purple));
-
-  --color-bg: #f8f3f8;
-  --color-text: #3a2e39;
-  --color-primary: #ff71ce;
-  --color-secondary: #01cdfe;
-  --color-accent: #05ffa1;
-  --color-title: #8338ec;
-  --color-button-bg: #ff71ce;
-  --color-button-text: #fff;
-
   --font-title: 'Saira Stencil One', sans-serif;
   --font-body: 'Nunito', sans-serif;
   --font-mono: 'Press Start 2P', monospace;
+  --font-default: 'Roboto', sans-serif;
+
+  --vaporwave-light-blue: #93ceff;
+  --vaporwave-blue: #01cdfe;
+  --vaporwave-dark-blue: #015e7e;
+
+  --vaporwave-dark-pink: #df3ea6;
+  --vaporwave-pink: #d660ad;
+  --vaporwave-light-pink: #f389ce;
+
+  --vaporwave-light-purple: #ac5cf1;
+  --vaporwave-purple: #714499;
+  --vaporwave-dark-purple: #481c70;
+
+  --vaporwave-light-cyan: #5cf8bc;
+  --vaporwave-cyan: #1cdf94;
+  --vaporwave-dark-cyan: #125e43;
+
+  --vaporwave-light-yellow: #dfda7e;
+  --vaporwave-yellow: #d4d04e;
+  --vaporwave-dark-yellow: #b9ac18;
+
+  --vaporwave-white: #ffffff;
+  --vaporwave-light-grey: #acacac;
+  --vaporwave-grey: #818181;
+  --vaporwave-dark-grey: #3f3f3f;
+  --vaporwave-darker-grey: #333333;
+  --vaporwave-black: #000000;
+
+  --bg-gradient: linear-gradient(to bottom, var(--vaporwave-white), var(--vaporwave-white), var(--vaporwave-white), var(--vaporwave-light-blue), var(--vaporwave-blue));
+  
+  --title-1: var(--vaporwave-dark-blue);
+  --title-2: var(--vaporwave-pink);
+  --title-3: var(--vaporwave-dark-purple);
+  --title-4: var(--vaporwave-dark-yellow);
+
+  --text-default: var(--vaporwave-black);
+  --body-text-1: var(--vaporwave-dark-cyan);
+  --body-text-2: var(--vaporwave-dark-blue);
+  --button-bg: var(--vaporwave-purple);
+  --button-hover-bg: var(--vaporwave-dark-pink);
+  --button-text: var(--vaporwave-pink);
+  --button-hover-text: var(--vaporwave-light-dark-purple);
+
 }
 
 /* DARK MODE */
 .dark {
 
-  --vaporwave-pink: #701450;
-  --vaporwave-purple: #36075f;
-  --vaporwave-blue: #125c6e;
-  --vaporwave-cyan: #0f5238;
-  --vaporwave-yellow: #aca95e;
+  --bg-gradient: linear-gradient(to bottom, var(--vaporwave-black), var(--vaporwave-black), var(--vaporwave-darker-grey), var(--vaporwave-dark-purple), var(--vaporwave-dark-purple));
+  
+  --title-1: var(--vaporwave-blue);
+  --title-2: var(--vaporwave-light-pink);
+  --title-3: var(--vaporwave-light-cyan);
+  --title-4: var(--vaporwave-light-purple);
 
-  --bg-gradient: linear-gradient(to bottom right, var(--vaporwave-pink), var(--vaporwave-blue), var(--vaporwave-purple));
-
-  --color-bg: #1a1a2e;
-  --color-text: #e0aaff;
-  --color-primary: #ff71ce;
-  --color-secondary: #01cdfe;
-  --color-accent: #05ffa1;
-  --color-title: #ff9f1c;
-  --color-button-bg: #ff71ce;
-  --color-button-text: #1a1a2e;
+  --text-default: var(--vaporwave-white);
+  --body-text-1: var(--vaporwave-cyan);
+  --body-text-2: var(--vaporwave-light-purple);
+  --button-bg: var(--vaporwave-pink);
+  --button-hover-bg: var(--vaporwave-dark-pink);
+  --button-text: var(--vaporwave-purple);
+  --button-hover-text: var(--vaporwave-light-purple);
 }
 
 .bg-vaporwave-gradient {
-  background: linear-gradient(to bottom right, var(--vaporwave-blue), var(--vaporwave-purple), var(--vaporwave-pink));
+  background: var(--bg-gradient);
 }
 
 body {
   background-color: var(--bg-gradient);
-  color: var(--color-text);
+  color: var(--text-default);
   font-family: var(--font-body);
 }
 
 h1,
 h2,
 h3 {
-  color: var(--color-title);
-  font-family: var(--font-title);
+  color: var(--title-1);
+  font-family: var(--font-default);
 }
 
 button {
-  background-color: var(--color-button-bg);
-  color: var(--color-button-text);
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: var(--color-accent);
+  background-color: var(--button-hover-bg);
 }
 
 code,
@@ -85,23 +110,103 @@ pre {
   font-family: var(--font-mono);
 }
 
+/* Custom Classes */
+.title-1 {
+  color: var(--title-1);
+}
+
+.title-2 {
+  color: var(--title-2);
+}
+
+.title-3 {
+  color: var(--title-3);
+}
+
+.title-4 {
+  color: var(--title-4);
+}
+
+.text-default {
+  color: var(--text-default);
+}
+
+.body-text-1 {
+  color: var(--body-text-1);
+}
+
+.body-text-2 {
+  color: var(--body-text-2);
+}
+
+.button-bg {
+  color: var(--button-bg);
+}
+
+.button-hover-bg {
+  color: var(--button-hover-bg)
+}
+
+.button-text {
+  color: var(--button-text)
+}
+
+.button-hover-text {
+  color: var(--button-hover-text)
+}
+
 /* Vaporwave Colors */
-.text-vaporwave-pink {
-  color: var(--vaporwave-pink);
+/* Blue */
+.vaporwave-light-blue {
+  color: var(--vaporwave-light-blue);
 }
-
-.text-vaporwave-purple {
-  color: var(--vaporwave-purple);
-}
-
-.text-vaporwave-blue {
+.vaporwave-blue {
   color: var(--vaporwave-blue);
 }
-
-.text-vaporwave-cyan {
-  color: var(--vaporwave-cyan);
+.vaporwave-dark-blue {
+  color: var(--vaporwave-dark-blue);
 }
 
-.text-vaporwave-yellow {
+/* Pink */
+.vaporwave-light-pink {
+  color: var(--vaporwave-light-pink);
+}
+.vaporwave-pink {
+  color: var(--vaporwave-pink);
+}
+.vaporwave-dark-pink {
+  color: var(--vaporwave-dark-pink);
+}
+
+/* Purple */
+.vaporwave-light-purple {
+  color: var(--vaporwave-light-purple);
+}
+.vaporwave-purple {
+  color: var(--vaporwave-purple);
+}
+.vaporwave-dark-purple {
+  color: var(--vaporwave-dark-purple);
+}
+
+/* Cyan */
+.vaporwave-light-cyan {
+  color: var(--vaporwave-light-cyan);
+}
+.vaporwave-cyan {
+  color: var(--vaporwave-cyan);
+}
+.vaporwave-dark-cyan {
+  color: var(--vaporwave-dark-cyan);
+}
+
+/* Yellow */
+.vaporwave-light-yellow {
+  color: var(--vaporwave-light-yellow);
+}
+.vaporwave-yellow {
   color: var(--vaporwave-yellow);
+}
+.vaporwave-dark-yellow {
+  color: var(--vaporwave-dark-yellow);
 }
