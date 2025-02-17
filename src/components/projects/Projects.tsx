@@ -56,7 +56,7 @@ const ProjectListItem = ({ proj }) => {
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
 
   return (
-    <div className="flex flex-col justify-between p-4 bg-gray-100 border-2 border-vaporwave_dark_pink md:flex-row dark:bg-gray-800 rounded-xl">
+    <div className="flex flex-col justify-between p-4 bg-gray-100 border-2 border-vaporwave_dark_pink md:flex-row dark:bg-gray-900 rounded-xl">
       <div className="flex justify-center md:w-1/3">
         {image && (
           <a href={url || "#"} target="_blank" rel="noopener noreferrer">
@@ -103,7 +103,7 @@ const ProjectListItem = ({ proj }) => {
 
 const DescriptionList = ({ list }) => {
   return (
-    <ul className="pl-5 text-sm text-left text-gray-600 list-disc dark:text-gray-400">
+    <ul className="pl-5 text-sm text-left text-gray-800 list-disc dark:text-gray-200">
       {list.map((item, i) => (
         <li key={i} className="pb-1">{item}</li>
       ))}

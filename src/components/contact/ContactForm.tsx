@@ -93,7 +93,7 @@ const ContactForm = () => {
 
   return (
     <div className="flex items-center justify-center border-2 border-vaporwave_dark_pink rounded-xl dark:bg-gray-900 dark:text-white">
-      <div className="max-w-lg p-6 mx-auto rounded-lg shadow-lg bg-vaporwave_light_blue dark:bg-gray-800 dark:text-white">
+      <div className="max-w-lg p-6 mx-auto bg-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:text-white">
         <form onSubmit={handleSubmit} className="space-y-4">
           <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 rounded dark:bg-gray-700 focus:outline-none" value={formData.name} onChange={handleChange} />
           {nameError && <b className="text-red-800">{nameError}</b>}
