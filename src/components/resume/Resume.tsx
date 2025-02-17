@@ -1,5 +1,8 @@
 "use client";
 
+import { useRef } from "react";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 import {StackList} from "../../components/utils"
 
 const skills = [
@@ -56,15 +59,53 @@ const experience = [
   }
 ]
 
-// Style sets
 const titleStyle = 'text-xl text-blue-500 tracking-widest font-semibold  border-b pb-2'
 
+const generatePDF = (contentRef: any) => {
+  if (!contentRef.current) return;
+
+  html2canvas(contentRef.current, { scale: window.devicePixelRatio }).then((canvas) => {
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "mm", "a4");
+    const imgWidth = 210; // A4 width in mm
+    const pageHeight = 297; // A4 height in mm
+    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Maintain aspect ratio
+
+    let heightLeft = imgHeight;
+    let yPosition = 10;
+
+    pdf.addImage(imgData, "PNG", 0, yPosition, imgWidth, imgHeight);
+    heightLeft -= pageHeight - 10;
+
+    while (heightLeft > 0) {
+      yPosition = heightLeft - imgHeight + 10;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, yPosition, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+    }
+
+    pdf.save("Kenny_Feierstein_Resume.pdf");
+  });
+};
+
+
 const Resume = () => {
+  const resumeRef = useRef(null);
+
   return (
       <div className="pt-14 bg-vaporwave-gradient">
         <div id="container" className="flex flex-col w-full max-w-4xl p-8 mx-auto space-y-8 ">
 
-          <div className="max-w-4xl p-8 mx-auto space-y-6 bg-white border-2 rounded-lg shadow-lg border-vaporwave_dark_pink dark:bg-gray-900">
+          <div className="flex justify-center">
+            <button 
+              onClick={() => generatePDF(resumeRef)}
+              className="px-4 py-2 text-white rounded-lg shadow-md bg-vaporwave_dark_pink hover:bg-pink-500"
+            >
+              Download Resume
+            </button>
+          </div>
+
+          <div ref={resumeRef} className="max-w-4xl p-8 mx-auto space-y-6 bg-white border-2 rounded-lg shadow-lg border-vaporwave_dark_pink dark:bg-gray-900">
             {/* Header Section */}
             <Header/>
 
