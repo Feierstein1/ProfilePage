@@ -35,7 +35,7 @@ export default function InteractiveCat() {
   }, [mouseX]);
 
   return (
-    <div className="fixed right-0 w-64 overflow-visible h-[35rem] bottom-20">
+    <div className="fixed right-0 w-64 overflow-visible h-[35rem] bottom-20 hidden lg:block">
 
     {/* Cat Arm */}
     {swipe && (

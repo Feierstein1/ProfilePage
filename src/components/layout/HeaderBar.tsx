@@ -18,7 +18,7 @@ const HeaderBar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const style = "p-5 justify-center transform transition-all duration-500 ease-in-out hover:scale-110 hover:text-blue-500"
+    const style = "p-5 justify-center transform transition-all duration-500 ease-in-out hover:scale-110 hover:text-vaporwave_dark_pink dark:hover:text-vaporwave_pink"
 
     return (
         <>

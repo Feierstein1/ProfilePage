@@ -119,8 +119,8 @@ const ContactForm = () => {
 
 const SuccessfulMessage = () => {
   return (
-      <div className="flex justify-center p-2 mb-4 bg-green-600 border-2 border-green-800 ">
-        <h2 className="text-white">Email Successfull Sent!</h2>
+      <div className="flex justify-center p-2 mb-4 ">
+        <h2 className="font-bold text-vaporwave_dark_pink">Email Successfull Sent!</h2>
       </div>
   )
 }
