@@ -2,33 +2,17 @@
 
 import { StackList } from "../../components/utils";
 import { useState } from "react";
+import { projectsArr } from "./projects_info";
 
-const projectsArr = [
-  {
-    title: "DCFpro.com",
-    image: "dcfpro.png",
-    url: "https://www.dcfpro.com", 
-    description: "I created the entire website for DCFpro.com, an e-commerce Single Page Application (SPA) designed to streamline the organization and generation of reports for commercial property discount cash flows, incorporating subscription-based e-commerce functionalities. Led the end-to-end development across the technology stack, encompassing front-end, back-end, server-side, and database components.",
-    descriptionList: [
-      "Utilized front-end UI libraries such as MUI and Chart.js for robust design and data readability on both desktop and mobile devices.",
-      "Defined and tested NoSQL rules in Firestore to secure CRUD operations and prevent unauthorized access.",
-      "Created pipeline between database and Stripe for smooth subscription-based access.",
-      "Designed an organized ticket system for customer support.",
-      "Optimized deployment of new features by setting test environment only accessible to team members. This allowed us to test new features in a QA environment before deploying in production.",
-      "Increased user traffic by launching a Google Ad campaign",
-    ],
-    stack: [
-      "JavaScript",
-      "React",
-      "Redux",
-      "Node.js",
-      "Express",
-      "Stripe",
-      "Firebase",
-      "NoSQL",
-    ],
-  },
-];
+// Define Project interface
+interface Project {
+  title: string;
+  image?: string;
+  url?: string;
+  description: string;
+  descriptionList?: string[];
+  stack: string[];
+}
 
 const Projects = () => {
   return (
@@ -41,7 +25,12 @@ const Projects = () => {
   );
 };
 
-const ProjectListContainer = ({ projects }) => {
+// Props for ProjectListContainer
+interface ProjectListContainerProps {
+  projects: Project[];
+}
+
+const ProjectListContainer: React.FC<ProjectListContainerProps> = ({ projects }) => {
   return (
     <div className="flex flex-col space-y-6">
       {projects.map((proj, index) => (
@@ -51,61 +40,91 @@ const ProjectListContainer = ({ projects }) => {
   );
 };
 
-const ProjectListItem = ({ proj }) => {
+// Props for ProjectListItem
+interface ProjectListItemProps {
+  proj: Project;
+}
+
+const ProjectListItem: React.FC<ProjectListItemProps> = ({ proj }) => {
   const { title, image, url, description, descriptionList, stack } = proj;
-  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col justify-between p-4 bg-gray-100 border-2 border-vaporwave_dark_pink md:flex-row dark:bg-gray-900 rounded-xl">
-      <div className="flex justify-center md:w-1/3">
-        {image && (
-          <a href={url || "#"} target="_blank" rel="noopener noreferrer">
-            <img src={image} alt={title} className="w-20 h-20 mt-3 mb-3 border-4 border-gray-500 rounded-lg sm:w-32 sm:h-32" />
-          </a>
-        )}
-      </div>
-      <div className="w-full md:w-2/3">
-        <div>
-          <h1 className="pb-2 text-xl font-bold text-left sm:text-3xl font-saira">
-            {url ? (
-              <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                {title}
-              </a>
-            ) : (
-              title
-            )}
-          </h1>
+    <div className="p-4 bg-violet-800 border-2 border-vaporwave_dark_pink md:flex-row dark:bg-gray-900 rounded-xl">
+      <DescriptionTitle title={title} image={image} url={url} />
+      <div>
+        <h3 className="pb-3 text-sm text-left text-gray-300">{description}</h3>
 
-          <h3 className="pb-3 text-sm text-left text-gray-700 dark:text-gray-300">{description}</h3>
-
-          {descriptionList && (
-            <div className="sm:hidden">
-              <button 
-                onClick={() => setIsDescriptionOpen(!isDescriptionOpen)} 
-                className="mb-4 text-sm text-white bg-vaporwave_purple hover:bg-vaporwave_dark_purple"
-              >
-                {isDescriptionOpen ? "Show less" : "Show more"}
-              </button>
-              {isDescriptionOpen && <DescriptionList list={descriptionList} />}
-            </div>
-          )}
-          
-          <div className="hidden sm:block">
-            {descriptionList && <DescriptionList list={descriptionList} />}
+        {descriptionList && (
+          <div className="sm:hidden">
+            <button 
+              onClick={() => setIsDescriptionOpen(!isDescriptionOpen)} 
+              className="mb-4 text-sm text-white bg-vaporwave_purple hover:bg-vaporwave_dark_purple"
+            >
+              {isDescriptionOpen ? "Show less" : "Show more"}
+            </button>
+            {isDescriptionOpen && <DescriptionList list={descriptionList} />}
           </div>
-
-          <StackList arr={stack} color="bg-blue-500" />
+        )}
+        
+        <div className="hidden sm:block">
+          {descriptionList && <DescriptionList list={descriptionList} />}
         </div>
+
+        <StackList arr={stack} color="bg-blue-500" />
       </div>
     </div>
   );
 };
 
-const DescriptionList = ({ list }) => {
+// Props for DescriptionTitle
+interface DescriptionTitleProps {
+  title: string;
+  image?: string;
+  url?: string;
+}
+
+const DescriptionTitle: React.FC<DescriptionTitleProps> = ({ title, image, url }) => {
   return (
-    <ul className="pl-5 text-sm text-left text-gray-800 list-disc dark:text-gray-200">
+    <div className="flex justify-start">
+      {image ? (
+        <div className="flex items-center">
+          <a href={url || "#"} target="_blank" rel="noopener noreferrer" className="hidden md:block">
+            <img src={image} alt={title} className="w-10 h-10 mt-3 mb-3 border-4 border-gray-500 rounded-lg sm:w-20 sm:h-20" />
+          </a>
+          <h1 className="pl-3 text-xl font-bold text-left sm:text-3xl font-saira text-blue-400 drop-shadow-[2px_2px_0px_black]">
+            {title}
+          </h1>
+        </div>
+      ) : (
+        <div className="w-full">
+          <h1 className="pb-2 text-xl font-bold text-left sm:text-3xl font-saira drop-shadow-[2px_2px_0px_black]">
+            {url ? (
+              <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                {title}
+              </a>
+            ) : (
+              <b className="text-blue-400">{title}</b>
+            )}
+          </h1>
+        </div>
+      )}
+    </div> 
+  );
+};
+
+// Props for DescriptionList
+interface DescriptionListProps {
+  list: string[];
+}
+
+const DescriptionList: React.FC<DescriptionListProps> = ({ list }) => {
+  return (
+    <ul className="pl-5 text-sm text-left text-gray-200 list-none list-outside">
       {list.map((item, i) => (
-        <li key={i} className="pb-1">{item}</li>
+        <li key={i} className="pb-4 relative pl-6 before:absolute before:left-0 before:top-1 before:text-blue-500 before:content-['\2726']">
+          {item}
+        </li>
       ))}
     </ul>
   );
