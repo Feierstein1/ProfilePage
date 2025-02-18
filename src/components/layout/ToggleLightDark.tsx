@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTheme } from "next-themes";
 import { FiSun, FiMoon } from "react-icons/fi";
 
@@ -17,7 +17,7 @@ const ThemeToggle = () => {
     } else {
       setTheme("light"); 
     }
-  }, []);
+  }, [setTheme]);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";

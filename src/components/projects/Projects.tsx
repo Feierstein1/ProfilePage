@@ -2,9 +2,9 @@
 
 import { StackList } from "../../components/utils";
 import { useState } from "react";
+import Image from "next/image";
 import { projectsArr } from "./projects_info";
 
-// Define Project interface
 interface Project {
   title: string;
   image?: string;
@@ -25,7 +25,6 @@ const Projects = () => {
   );
 };
 
-// Props for ProjectListContainer
 interface ProjectListContainerProps {
   projects: Project[];
 }
@@ -85,12 +84,21 @@ interface DescriptionTitleProps {
 }
 
 const DescriptionTitle: React.FC<DescriptionTitleProps> = ({ title, image, url }) => {
+
+  const validUrl = url && url.trim() !== "" ? url : undefined;
+
   return (
     <div className="flex justify-start">
       {image ? (
-        <div className="flex items-center">
-          <a href={url || "#"} target="_blank" rel="noopener noreferrer" className="hidden md:block">
-            <img src={image} alt={title} className="w-10 h-10 mt-3 mb-3 border-4 border-gray-500 rounded-lg sm:w-20 sm:h-20" />
+        <div className="flex items-center pb-2">
+          <a href={url ? validUrl : "#"} target="_blank" rel="noopener noreferrer" className="hidden md:block">
+            <Image 
+              src={image} 
+              alt={title} 
+              width={50} 
+              height={50} 
+              className="object-cover border-2" 
+            />
           </a>
           <h1 className="pl-3 text-xl font-bold text-left sm:text-3xl font-saira text-blue-400 drop-shadow-[2px_2px_0px_black]">
             {title}

@@ -1,6 +1,7 @@
 export const projectsArr = [
   {
     title: "Profile Website",
+    url: "", 
     description: "I created this website using Next.js, Tailwindcss, and React as the main frameworks.",
     descriptionList: [
       "Utilized front-end UI libraries such as MUI and Chart.js for robust design and data readability on both desktop and mobile devices.",
@@ -17,7 +18,7 @@ export const projectsArr = [
   },
   {
     title: "DCFpro.com",
-    image: "dcfpro.png",
+    image: "/dcfpro.png",
     url: "https://www.dcfpro.com", 
     description: "I created the entire website for DCFpro.com, an e-commerce Single Page Application (SPA) designed to streamline the organization and generation of reports for commercial property discount cash flows, incorporating subscription-based e-commerce functionalities. Led the end-to-end development across the technology stack, encompassing front-end, back-end, server-side, and database components.",
     descriptionList: [

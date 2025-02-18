@@ -1,24 +1,38 @@
 "use client";
 
-import {useEffect, useState} from "react"
+import {useEffect, useState, useRef} from "react"
+import Link from "next/link";
 import ThemeToggle from "./ToggleLightDark"
+
+const headerArr = [
+    {
+        text: "Home",
+        link: "/"
+    },
+    {
+        text: "Projects",
+        link: "/projects"
+    },
+    {
+        text: "Contact",
+        link: "/contact"
+    }
+]
 
 const HeaderBar = () => {
     const [isVisible, setIsVisible] = useState(true);
-    let lastScrollY = 0
+    const lastScrollY = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-        setIsVisible(currentScrollY < lastScrollY || currentScrollY < 50); 
-        lastScrollY = currentScrollY;
+            const currentScrollY = window.scrollY;
+            setIsVisible(currentScrollY < lastScrollY.current || currentScrollY < 50); 
+            lastScrollY.current = currentScrollY;
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-    const style = "p-5 justify-center transform transition-all duration-500 ease-in-out hover:scale-110 hover:text-vaporwave_dark_pink dark:hover:text-vaporwave_pink"
 
     return (
         <>
@@ -29,9 +43,9 @@ const HeaderBar = () => {
             >
                 <nav className="container flex justify-center mx-auto">
                     <ul className="flex gap-2 pt-1">
-                        <li><a href="/" className={`${style}`}>Home</a></li>
-                        <li><a href="/projects" className={`${style}`}>Projects</a></li>
-                        <li><a href="/contact" className={`${style}`}>Contact</a></li>
+                        {headerArr.map(({text, link},i) => (
+                            <li key={i}><Link href={link} className="p-5 justify-center transform transition-all duration-500 ease-in-out hover:scale-110 hover:text-vaporwave_dark_pink dark:hover:text-vaporwave_pink">{text}</Link></li>
+                        ))}
                     </ul>
                     <ThemeToggle/>
                 </nav>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import {experience, skills} from "./resume_info"
@@ -34,7 +35,6 @@ const generatePDF = (contentRef: any) => {
     pdf.save("Kenny_Feierstein_Resume.pdf");
   });
 };
-
 
 const Resume = () => {
   const resumeRef = useRef(null);
@@ -156,7 +156,13 @@ const Education = () => {
     <section>
         <h2 className={`${titleStyle}`}>Education</h2>
         <div className="flex justify-start">
-        <img src="/unf.png" alt="UNF Logo" className="w-20 h-20 mt-3 mr-3 border-4 rounded-lg border-white-500 " />
+          <Image 
+            src="/unf.png"
+            alt="UNF Logo"
+            width={80} 
+            height={80} 
+            className="w-20 h-20 mt-3 mr-3 border-4 rounded-lg border-white-500 "
+          />
         <div className="mt-4">
           <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Bachelor of Science</h3>
           <h2>Information Science (Computer Science Program)</h2>

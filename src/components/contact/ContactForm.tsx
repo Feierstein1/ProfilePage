@@ -55,6 +55,7 @@ const ContactForm = () => {
       }
     } catch (err) {
       setError("Something went wrong. Please try again.");
+      console.log(err)
     } finally {
       setLoading(false);
     }

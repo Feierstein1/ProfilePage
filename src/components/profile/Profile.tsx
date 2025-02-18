@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { FaJs, FaReact, FaNodeJs, FaDatabase, FaFire, FaGitAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
 import CatInteraction from './CatInteraction';
@@ -18,7 +19,7 @@ const Profile = () => {
             <div className="flex flex-col items-center justify-center md:flex-row">
               {/* Left Side - Profile Image */}
               <div className="flex justify-center w-full p-5 md:justify-end md:w-1/2">
-                <img
+                <Image
                   src="/profilePic.png" 
                   alt="Profile Picture"
                   width={300}
@@ -30,7 +31,7 @@ const Profile = () => {
               {/* Right Side - Text */}
               <div className="flex flex-col items-center w-full mt-8 text-center md:w-1/2 md:items-start md:text-left md:mt-0">
                 <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-vaporwave_light_yellow dark:text-title1 font-saira drop-shadow-[2px_2px_0px_black]">
-                  Hello, I'm
+                  Hello, I&apos;m
                   <p className="text-4xl font-bold md:text-5xl lg:text-6xl text-title2 font-saira drop-shadow-[2px_2px_0px_black]">KENNY FEIERSTEIN</p>
                 </h1>
                 {/* Account Links */}
@@ -46,30 +47,6 @@ const Profile = () => {
         {/* Tech Stack */}
         <TechStack />
       </div>
-    </div>
-  );
-};
-
-// Profile Picture Component
-const Picture = () => {
-  return (
-    <div className="flex justify-center">
-      <div className="w-32 overflow-hidden rounded-lg h-42 md:w-48 md:h-56">
-        <img src="/profilePic.png" alt="Your Name" className="object-cover w-full h-full transition-all ease-in-out hover:w-38 " />
-      </div>
-    </div>
-  );
-};
-
-// Summary Component
-const Summary = () => {
-  return (
-    <div className="space-y-8 text-center md:text-left">
-      <p className="text-lg text-gray-700 dark:text-gray-300">
-        Software Engineer with experience in full-stack development using Node.js. 
-        Skilled in building scalable applications and collaborating in Agile, remote work environments.
-      </p>
-      <AccountLinks/>
     </div>
   );
 };
