@@ -159,6 +159,7 @@ const Education = () => {
           <Image 
             src="/unf.png"
             alt="UNF Logo"
+            unoptimized
             width={80} 
             height={80} 
             className="w-20 h-20 mt-3 mr-3 border-4 rounded-lg border-white-500 "

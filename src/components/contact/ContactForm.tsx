@@ -41,7 +41,7 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://portfolio-c207f.firebaseapp.com/contactForm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

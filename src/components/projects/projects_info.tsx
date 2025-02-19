@@ -2,10 +2,12 @@ export const projectsArr = [
   {
     title: "Profile Website",
     url: "", 
-    description: "I created this website using Next.js, Tailwindcss, and React as the main frameworks.",
+    description: "This personal portfolio website showcases my projects and skills. Built using Next.js, React, and TailwindCSS, the site is hosted on Firebase and incorporates Firebase Functions for dynamic interaction.",
     descriptionList: [
-      "Utilized front-end UI libraries such as MUI and Chart.js for robust design and data readability on both desktop and mobile devices.",
-      "Defined and tested NoSQL rules in Firestore to secure CRUD operations and prevent unauthorized access."
+      "Designed and developed responsive, mobile-friendly components for seamless browsing",
+      "Leveraged Next.js routing for efficient URL management and navigation",
+      "Integrated Firebase Functions to handle HTTP requests, enabling dynamic functionality from static pages",
+      "Crafted a visually appealing and user-friendly interface using TailwindCSS"
     ],
     stack: [
       "JavaScript",

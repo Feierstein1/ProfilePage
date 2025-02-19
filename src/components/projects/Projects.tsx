@@ -95,6 +95,7 @@ const DescriptionTitle: React.FC<DescriptionTitleProps> = ({ title, image, url }
             <Image 
               src={image} 
               alt={title} 
+              unoptimized
               width={50} 
               height={50} 
               className="object-cover border-2" 

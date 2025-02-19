@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaJs, FaReact, FaNodeJs, FaDatabase, FaFire, FaGitAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
 import CatInteraction from './CatInteraction';
@@ -22,6 +23,7 @@ const Profile = () => {
                 <Image
                   src="/profilePic.png" 
                   alt="Profile Picture"
+                  unoptimized
                   width={300}
                   height={300}
                   className="border-4 rounded-full shadow-xl"
@@ -68,9 +70,9 @@ const AccountLinks = () => {
 const ResumeLink = () => {
   return (
     <>
-      <a href="/resume" className="p-2 text-white rounded-full bg-vaporwave_dark_blue hover:bg-blue-700 dark:bg-vaporwave_pink dark:hover:bg-vaporwave_dark_pink ">
+      <Link href="/resume" className="p-2 text-white rounded-full bg-vaporwave_dark_blue hover:bg-blue-700 dark:bg-vaporwave_pink dark:hover:bg-vaporwave_dark_pink ">
         <b className="drop-shadow-[1px_1px_0px_black]">View Resume</b>
-      </a>
+      </Link>
     </>
   )
 }
