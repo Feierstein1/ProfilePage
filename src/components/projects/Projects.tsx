@@ -4,6 +4,7 @@ import { StackList } from "../../components/utils";
 import { useState } from "react";
 import Image from "next/image";
 import { projectsArr } from "./projects_info";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 interface Project {
   title: string;
@@ -58,11 +59,23 @@ const ProjectListItem: React.FC<ProjectListItemProps> = ({ proj }) => {
           <div className="sm:hidden">
             <button 
               onClick={() => setIsDescriptionOpen(!isDescriptionOpen)} 
-              className="mb-4 text-sm text-white bg-vaporwave_purple hover:bg-vaporwave_dark_purple"
+              className="mb-4 bg-transparent hover:bg-transparent text-sm text-white flex items-center space-x-2"
             >
-              {isDescriptionOpen ? "Show less" : "Show more"}
+              {isDescriptionOpen ? (
+                <>
+                  <FaChevronUp />
+                  <span>Show less</span>
+                </>
+              ) : (
+                <>
+                  <FaChevronDown />
+                  <span>Show more</span>
+                </>
+              )}
             </button>
-            {isDescriptionOpen && <DescriptionList list={descriptionList} />}
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isDescriptionOpen ? "max-h-screen" : "max-h-0"}`}>
+              {isDescriptionOpen && <DescriptionList list={descriptionList} />}
+            </div>
           </div>
         )}
         

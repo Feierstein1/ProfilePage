@@ -2,39 +2,10 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
 import {experience, skills} from "./resume_info"
 import {StackList} from "../../components/utils"
 
 const titleStyle = 'text-xl text-blue-500 tracking-widest font-semibold  border-b pb-2'
-
-const generatePDF = (contentRef: any) => {
-  if (!contentRef.current) return;
-
-  html2canvas(contentRef.current, { scale: window.devicePixelRatio }).then((canvas) => {
-    const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF("p", "mm", "a4");
-    const imgWidth = 210; // A4 width in mm
-    const pageHeight = 297; // A4 height in mm
-    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Maintain aspect ratio
-
-    let heightLeft = imgHeight;
-    let yPosition = 10;
-
-    pdf.addImage(imgData, "PNG", 0, yPosition, imgWidth, imgHeight);
-    heightLeft -= pageHeight - 10;
-
-    while (heightLeft > 0) {
-      yPosition = heightLeft - imgHeight + 10;
-      pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, yPosition, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
-    }
-
-    pdf.save("Kenny_Feierstein_Resume.pdf");
-  });
-};
 
 const Resume = () => {
   const resumeRef = useRef(null);
@@ -45,7 +16,7 @@ const Resume = () => {
           <h1 className="pb-4 text-3xl font-bold text-center text-vaporwave_pink font-saira">Resume</h1>
           <div className="flex justify-center">
             <button 
-              onClick={() => generatePDF(resumeRef)}
+              onClick={() => window.open('/Kenny_Feierstein_Resume.pdf', '_blank')}
               className="px-4 py-2 text-white rounded-lg shadow-md bg-vaporwave_dark_pink hover:bg-pink-500"
             >
               Download Resume
