@@ -1,21 +1,24 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { FiSun, FiMoon } from "react-icons/fi";
 
 const ThemeToggle = () => {
-  const {theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem("theme");
     const htmlElement = document.documentElement;
-    
+
     if (savedTheme) {
-        setTheme(savedTheme);
-        if (savedTheme === "dark") htmlElement.classList.add("dark");
+      setTheme(savedTheme);
+      htmlElement.classList.toggle("dark", savedTheme === "dark");
     } else {
-      setTheme("light"); 
+      setTheme("dark");
+      htmlElement.classList.add("dark");
     }
   }, [setTheme]);
 
@@ -26,10 +29,11 @@ const ThemeToggle = () => {
     const htmlElement = document.documentElement;
     htmlElement.classList.toggle("dark", newTheme === "dark");
 
-    // Save the theme and timestamp
     localStorage.setItem("theme", newTheme);
     localStorage.setItem("themeTimestamp", Date.now().toString());
   };
+
+  if (!mounted) return null; // Prevents hydration mismatch
 
   return (
     <button
