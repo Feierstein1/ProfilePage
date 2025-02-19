@@ -71,7 +71,7 @@ const ResumeLink = () => {
   return (
     <>
       <Link href="/resume" className="p-2 text-white rounded-full bg-vaporwave_dark_blue hover:bg-blue-700 dark:bg-vaporwave_pink dark:hover:bg-vaporwave_dark_pink ">
-        <b className="drop-shadow-[1px_1px_0px_black]">View Resume</b>
+        <b className="text-sm drop-shadow-[1px_1px_0px_black]">Resume</b>
       </Link>
     </>
   )
