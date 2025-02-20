@@ -3,6 +3,7 @@
 import {useEffect, useState, useRef} from "react"
 import Link from "next/link";
 import ThemeToggle from "./ToggleLightDark"
+import BeamEffect from "./BeamEffect"
 
 const headerArr = [
     {
@@ -41,7 +42,7 @@ const HeaderBar = () => {
                     isVisible ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
-                <nav className="container flex justify-center mx-auto">
+                <nav className="container flex justify-center mx-auto mb-4">
                     <ul className="flex gap-2 pt-1">
                         {headerArr.map(({text, link},i) => (
                             <li key={i}><Link href={link} className="p-5 justify-center transform transition-all duration-500 ease-in-out hover:scale-110 hover:text-vaporwave_dark_pink dark:hover:text-vaporwave_pink">{text}</Link></li>
@@ -49,6 +50,7 @@ const HeaderBar = () => {
                     </ul>
                     <ThemeToggle/>
                 </nav>
+                <BeamEffect />
             </header>
         </>
     )
