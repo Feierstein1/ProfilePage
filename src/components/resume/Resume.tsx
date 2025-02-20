@@ -90,9 +90,9 @@ const Experience = () => {
               <p className="text-gray-200">{title}</p>
               <p className="text-gray-200">{location}</p> 
             </div>
-            <ul className="pl-6 mt-2 text-gray-300 list-none list-outside">
+            <ul className="sm:pl-6 mt-2 text-gray-300 list-none list-outside">
               {details.map(({text, stack}, i) =>  (
-                <li key={i} className="pb-4 relative pl-6 before:absolute before:left-0 before:top-1 before:text-blue-500 before:content-['\2726']">
+                <li key={i} className="pb-4 relative pl-5 sm:pl-6 before:absolute before:left-0 before:top-1 before:text-blue-500 before:content-['\2726']">
                   {text}
                   <br/>
                   <div className="flex flex-wrap gap-2 mt-3">
