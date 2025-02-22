@@ -65,7 +65,7 @@ const Summary = () => {
     <>
       <section>
         <h2 className={`${titleStyle}`}>Summary</h2>
-        <p className="mt-4 text-gray-700 dark:text-gray-300">
+        <p className="text-sm sm:text-lg mt-4 text-gray-700 dark:text-gray-300">
           <b className="tracking-widest">SOFTWARE ENGINEER (FULL STACK)</b> with extensive experience developing and maintaining technical systems in Agile environments. 
           Skilled in synthesizing complex information, collaborating with cross-functional teams, and delivering solutions that achieve key performance indicators. 
           Proven ability to excel in autonomous and remote work settings while leveraging front-end, back-end, and server-side technologies.
@@ -83,16 +83,16 @@ const Experience = () => {
         {experience.map(({ title, company, location, date, details }, index) => (
           <div key={index} className="p-6 mt-4 bg-violet-800 rounded-xl dark:bg-gray-800">
             <div className="flex justify-between">
-              <h3 className="text-lg font-medium text-gray-200">{company}</h3>
-              <p className="text-gray-200">{date}</p>
+              <h3 className="text-md sm:text-lg font-medium text-gray-200">{company}</h3>
+              <p className="text-gray-200 text-sm sm:text-md">{date}</p>
             </div>
             <div className="flex justify-between">
-              <p className="text-gray-200">{title}</p>
-              <p className="text-gray-200">{location}</p> 
+              <p className="text-gray-200 text-sm sm:text-lg">{title}</p>
+              <p className="text-gray-200 text-sm sm:text-md">{location}</p> 
             </div>
             <ul className="sm:pl-6 mt-2 text-gray-300 list-none list-outside">
               {details.map(({text, stack}, i) =>  (
-                <li key={i} className="pb-4 relative pl-5 sm:pl-6 before:absolute before:left-0 before:top-1 before:text-blue-500 before:content-['\2726']">
+                <li key={i} className="text-sm sm:text-lg pb-4 relative pl-5 sm:pl-6 before:absolute before:left-0 before:top-1 before:text-blue-500 before:content-['\2726']">
                   {text}
                   <br/>
                   <div className="flex flex-wrap gap-2 mt-3">
@@ -137,8 +137,8 @@ const Education = () => {
           />
         <div className="mt-4">
           <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Bachelor of Science</h3>
-          <h2>Information Science (Computer Science Program)</h2>
-          <p className="text-gray-600 dark:text-gray-400">University of North Florida | 2018</p>
+          <h2 className="text-sm sm:text-lg">Information Science (Computer Science Program)</h2>
+          <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-400">University of North Florida | 2018</p>
         </div>
         </div>
       </section>
