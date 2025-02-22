@@ -4,6 +4,8 @@ import {useEffect, useState, useRef} from "react"
 import Link from "next/link";
 import ThemeToggle from "./ToggleLightDark"
 import BeamEffect from "./BeamEffect"
+import CatInteraction from "./CatInteraction"
+import { catAssets } from './catAssests'
 
 const headerArr = [
     {
@@ -52,6 +54,13 @@ const HeaderBar = () => {
                 </nav>
                 <BeamEffect />
             </header>
+            {catAssets.map((cat, i) => {
+                return (
+                    <CatInteraction key={i} cat={cat}/>
+                )
+            }) 
+            }
+            
         </>
     )
 }

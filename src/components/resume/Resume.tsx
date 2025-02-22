@@ -135,11 +135,11 @@ const Education = () => {
             height={80} 
             className="w-20 h-20 mt-3 mr-3 border-4 rounded-lg border-white-500 "
           />
-        <div className="mt-4">
-          <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Bachelor of Science</h3>
-          <h2 className="text-sm sm:text-lg">Information Science (Computer Science Program)</h2>
-          <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-400">University of North Florida | 2018</p>
-        </div>
+          <div className="mt-4">
+            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Bachelor of Science</h3>
+            <h2 className="text-sm sm:text-lg">Information Science (Computer Science Program)</h2>
+            <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-400">University of North Florida | 2018</p>
+          </div>
         </div>
       </section>
     </>

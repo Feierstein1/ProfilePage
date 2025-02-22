@@ -5,12 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaJs, FaReact, FaNodeJs, FaDatabase, FaFire, FaGitAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
-import CatInteraction from './CatInteraction';
+
 
 const Profile = () => {
   return (
     <div className="pt-14 bg-vaporwave-gradient">
-      <CatInteraction />
       <div id="container" className="flex flex-col w-full max-w-4xl p-8 mx-auto space-y-8 ">
         
         {/* Section with Profile Information */}
@@ -19,7 +18,7 @@ const Profile = () => {
           <div className="w-full p-8 border-4 rounded-lg shadow-xl bg-vaporwave_dark_blue border-vaporwave_dark_pink dark:bg-gray-700">
             <div className="flex flex-col items-center justify-center md:flex-row">
               {/* Left Side - Profile Image */}
-              <div className="flex justify-center w-full p-5 md:justify-end md:w-1/2">
+              <div className="flex justify-center w-full md:p-5 md:justify-end md:w-1/2">
                 <Image
                   src="/profilePic.png" 
                   alt="Profile Picture"
@@ -32,13 +31,13 @@ const Profile = () => {
 
               {/* Right Side - Text */}
               <div className="flex flex-col items-center w-full mt-8 text-center md:w-1/2 md:items-start md:text-left md:mt-0">
-                <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl text-vaporwave_light_yellow dark:text-title1 font-saira drop-shadow-[2px_2px_0px_black]">
+                <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl text-vaporwave_light_yellow dark:text-title1 font-saira drop-shadow-[2px_2px_0px_black]">
                   Hello, I&apos;m
-                  <p className="text-4xl font-bold md:text-5xl lg:text-6xl text-title2 font-saira drop-shadow-[2px_2px_0px_black]">KENNY FEIERSTEIN</p>
+                  <p className="text-4xl font-bold sm:text-5xl lg:text-6xl text-title2 font-saira drop-shadow-[2px_2px_0px_black]">KENNY FEIERSTEIN</p>
                 </h1>
                 {/* Account Links */}
                 <AccountLinks />
-                <p className="max-w-md mt-4 text-lg md:text-xl text-vaporwave_light_blue dark:text-bodyText1">
+                <p className="max-w-md mt-4 text-md sm:text-xlg text-vaporwave_light_blue dark:text-bodyText1">
                   Software Engineer with experience in full-stack development using Node.js. 
                   Skilled in building scalable applications and collaborating in Agile, remote work environments.
                 </p>
