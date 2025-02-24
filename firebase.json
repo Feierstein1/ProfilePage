@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "out",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,7 +10,8 @@
     "rewrites": [
       {
         "source": "/contact",
-        "destination": "/contact/index.html"
+        "destination": "/contact/index.html",
+        "function": "contactForm" 
       },
       {
         "source": "/resume",
