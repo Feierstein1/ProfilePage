@@ -41,7 +41,7 @@
   --vaporwave-black: #000000;
 
   /* --bg-gradient: linear-gradient(to bottom, var(--vaporwave-white), var(--vaporwave-white), var(--vaporwave-light-blue), var(--vaporwave-blue), var(--vaporwave-dark-blue)); */
-  --bg-gradient: linear-gradient(to bottom, var(--vaporwave-white));
+  --bg-gradient: linear-gradient(to bottom, var(--vaporwave-light-blue), var(--vaporwave-light-blue), var(--vaporwave-white), var(--vaporwave-white));
   
   --title-1: var(--vaporwave-dark-blue);
   --title-2: var(--vaporwave-pink);
@@ -95,15 +95,8 @@ h3 {
 }
 
 button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: var(--button-hover-bg);
 }
 
 code,

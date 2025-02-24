@@ -40,7 +40,7 @@ const HeaderBar = () => {
     return (
         <>
             <header
-                className={`fixed p-3 top-2 left-0 w-full transition-transform duration-300 ${
+                className={`fixed pt-5 top-2 left-0 w-full transition-transform duration-300 ${
                     isVisible ? "translate-y-0" : "-translate-y-full"
                 }`}
             >

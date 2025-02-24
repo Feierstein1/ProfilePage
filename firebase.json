@@ -8,9 +8,20 @@
     ],
     "rewrites": [
       {
-        "source": "/**",
-        "destination": "/index.html",
-        "function": "contactForm"
+        "source": "/contact",
+        "destination": "/contact/index.html"
+      },
+      {
+        "source": "/resume",
+        "destination": "/resume/index.html"
+      },
+      {
+        "source": "/projects",
+        "destination": "/projects/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   },
