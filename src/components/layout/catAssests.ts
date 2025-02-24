@@ -5,7 +5,7 @@ export const catAssets = [
         triggerZoneYmin: 400,
         triggerZoneYmax: 600,
         swipeZone: 200,
-        containerClass: "fixed left-[calc(60px)] w-64 overflow-visible h-[35rem] bottom-20 hidden lg:block", // Explicit left position
+        containerClass: "fixed left-[calc(60px)] w-64 overflow-visible h-[35rem] bottom-20 hidden lg:block z-10",
         catArm: {
             src: "/fancy-arm.png",
             width: 400,
@@ -31,7 +31,7 @@ export const catAssets = [
         triggerZoneYmin: 400,
         triggerZoneYmax: 600,
         swipeZone: 200,
-        containerClass: "fixed right-0 w-64 overflow-visible h-[35rem] bottom-20 hidden lg:block",
+        containerClass: "fixed right-0 w-64 overflow-visible h-[35rem] bottom-20 hidden lg:block z-10",
         catArm: {
             src: "/cat-arm.png",
             width: 400,

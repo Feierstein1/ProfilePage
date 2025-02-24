@@ -40,7 +40,13 @@
   --vaporwave-darker-grey: #333333;
   --vaporwave-black: #000000;
 
-  --bg-gradient: linear-gradient(to bottom, var(--vaporwave-light-blue), var(--vaporwave-light-blue), var(--vaporwave-white), var(--vaporwave-white));
+  --vaporwave-light-blue: rgba(173, 216, 230, 0.8);
+  --vaporwave-white: rgba(255, 255, 255, 0.8);
+  --bg-gradient: linear-gradient(to bottom,
+      var(--vaporwave-light-blue),
+      var(--vaporwave-light-blue),
+      var(--vaporwave-white),
+      var(--vaporwave-white));
   
   --title-1: var(--vaporwave-dark-blue);
   --title-2: var(--vaporwave-pink);
@@ -60,6 +66,8 @@
 /* DARK MODE */
 .dark {
 
+  --vaporwave-black: rgba(10, 10, 10, 0.8);
+  --vaporwave-dark-purple: rgba(50, 10, 90, 0.8);
   --bg-gradient: linear-gradient(to bottom, var(--vaporwave-black), var(--vaporwave-black), var(--vaporwave-dark-purple), var(--vaporwave-dark-purple));
   
   --title-1: var(--vaporwave-blue);

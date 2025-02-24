@@ -55,6 +55,9 @@ export default {
         buttonBg: "var(--button-bg)",
         buttonHoverBg: "var(--button-hover-bg)",
       },
+      backgroundImage: {
+        'city': "url('/city-background.jpg')"
+      },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
         saira: ['Saira Stencil One', 'sans-serif'],

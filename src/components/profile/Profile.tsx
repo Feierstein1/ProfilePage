@@ -9,9 +9,8 @@ import { SiMongodb } from 'react-icons/si';
 
 const Profile = () => {
   return (
-    <div className="pt-14 bg-vaporwave-gradient">
-      <div id="container" className="flex flex-col w-full max-w-4xl p-8 mx-auto space-y-8 ">
-        
+    <div className="pt-14 bg-vaporwave-gradient bg-opacity-30">
+      <div id="container" className="flex flex-col w-full max-w-4xl p-8 mx-auto space-y-8">
         {/* Section with Profile Information */}
         <section className="flex flex-col items-center justify-center w-full p-8 ">
           {/* Container with smaller size and background */}
@@ -89,10 +88,10 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-between sm:space-x-8 md:space-x-10 gap-y-4 sm:gap-y-6">
+    <div className="flex flex-wrap justify-between sm:space-x-8 md:space-x-10 gap-y-4 sm:gap-y-6 bg-white dark:bg-black border-1 rounded-lg p-5">
       {stackArr.map(({ type, icon: Icon, color }, index) => (
-        <div key={index} className="flex flex-col items-center">
-          <Icon className={`text-5xl md:text-3xl lg:text-4xl transition ${color}`} />
+        <div key={index} className="flex flex-col items-center ">
+          <Icon className={`text-4xl md:text-3xl lg:text-4xl transition ${color}`} />
           <p className="hidden mt-2 lg:block">{type}</p>
         </div>
       ))}

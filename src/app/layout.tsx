@@ -16,7 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <ThemeProvider attribute="class">
           <HeaderBar />
-          <main>{children}</main>
+          <div className="">
+            <main>{children}</main>
+          </div>
           <FooterBar />
         </ThemeProvider>
       </body>
