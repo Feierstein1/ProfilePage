@@ -5,6 +5,26 @@ export const skills = [
 export const experience = [
   {
     title: "Software Engineer",
+    company: "Time4Learning ",
+    location: "Jacksonville, FL",
+    date: "2021 - 2024",
+    details: [
+      {
+        text:"Collaborated with academic course curriculum developers to create complex online interactive experiences for grade school students.",
+        stack: [
+          "HTML", "JavaScript", "CSS", "PixiJS", "JSON"
+        ]
+      },
+      {
+        text:"Developed and maintained features while ensuring timely delivery and adherence to requirements outlined in Jira tickets.",
+        stack: [
+          "Vue 2", "JavaScript", "C#", "ASP.NET", "SQL"
+        ]
+      },
+    ]
+  },
+  {
+    title: "Software Engineer",
     company: "XCEL Solutions",
     location: "Jacksonville, FL",
     date: "2014 - 2021",
@@ -27,27 +47,6 @@ export const experience = [
           "HTML", "JavaScript", "CSS", "PHP", "VBA", "SQL", "Node.js"
         ]
       }
-    ]
-  },
-  {
-    title: "Software Engineer",
-    company: "Time4Learning ",
-    location: "Jacksonville, FL",
-    date: "2021 - 2024",
-    details: [
-      {
-        text:"Collaborated with academic course curriculum developers to create complex online interactive experiences for grade school students.",
-        stack: [
-          "HTML", "JavaScript", "CSS", "PixiJS", "JSON"
-        ]
-      },
-      {
-        text:"Developed and maintained features while ensuring timely delivery and adherence to requirements outlined in Jira tickets.",
-        stack: [
-          "Vue 2", "JavaScript", "C#", "ASP.NET", "SQL"
-        ]
-      },
-      
     ]
   }
 ]
