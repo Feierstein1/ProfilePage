@@ -52,7 +52,7 @@ export default function CatInteraction({ cat }: CatInteractionProps) {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [headVisible, swipe, cat]);
+  }, [swipe, cat]);
 
   return (
     <div className={cat.containerClass}>
