@@ -43,4 +43,23 @@ export const projectsArr = [
       "MUI"
     ],
   },
+  {
+    title: "Next.js Authenticated Login Template",
+    url: "https://github.com/Feierstein1/nextjs-login-template", 
+    description: "This is a Next.js project bootstrapped with create-next-app. It provides a bare-bones template for implementing basic login functionality using Next.js, React, and MongoDB.",
+    descriptionList: [
+      "User Authentication: Users are created and stored in a MongoDB cluster.",
+      "Password Security: Passwords are hashed using bcrypt for secure storage.",
+      "JWT Authentication: JSON Web Tokens (JWT) are generated upon login and stored in HTTP-only cookies for enhanced security.",
+      "Middleware Routing: Middleware is used to redirect users to either auth or unauth subdomains based on their authentication status.",
+    ],
+    stack: [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "JWT"
+    ],
+  },
 ];
