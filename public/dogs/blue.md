@@ -1,0 +1,16 @@
+- **Name**: Blue
+- **Named after**: Blue the raptor from Jurrasic World movie
+- **Breed**: Toy Austalian Shephard 
+- **Coat Color**: Blue Merle or gray
+- **Eye Color**: Blue eyes
+- **Gender**: Female
+- **Date of Birth**: 05/30/2018 
+- **Weight**: 13lbs
+- **Favorite Toy**: Tennis ball  
+- **Favorite Food**: Turkey and vegetables
+- **Personality**: Friendly, loves meeting new people, going to the dog park and chasing dogs, very intelligent, a favorite when taking out  
+- **Fears**: Cats, big dogs, loud children
+- **Favorite activities**: Playing fetch, going on walks, going to the park, going on car rides, going to her favorite bars with people she knows 
+- **Health Notes**: Is Spayed, up to date on all shots, does not have complications
+- **Random facts**: Likes to sit in chairs at bars and tap the bar for treats
+- **Tricks**: sit and stay, back flip, very good off leash

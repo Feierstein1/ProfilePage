@@ -1,0 +1,16 @@
+- **Name**: Rikki
+- **Named after**: Rikki Tikki Tavi the Mongoose
+- **Breed**: Toy Poodle
+- **Coat Color**: White
+- **Eye Color**: Brown eyes
+- **Gender**: Male
+- **Date of Birth**: 12/24/2018 
+- **Weight**: 9lbs
+- **Favorite Toy**: mouse toy for the cats
+- **Favorite Food**: ham
+- **Personality**: Friendly, loves meeting new people, going to the dog park, not too smart, very chill, likes being held, loves cats
+- **Fears**: halloween decorations
+- **Favorite activities**: Being carried in his carrier, going to the dog park, sitting in peoples laps, getting pets and treats
+- **Health Notes**: Is fixed, up to date on all shots, missing most of his teeth, needs grooming for constant hair growth
+- **Random facts**: Rikki has gotten a pink mullet from the groomer, he can wear sunglasses
+- **Tricks**: sit and stay

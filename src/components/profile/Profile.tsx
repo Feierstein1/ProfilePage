@@ -56,8 +56,8 @@ const AccountLinks = () => {
   return (
     <>
       <div className="!mt-3 flex justify-center sm:justify-start space-x-5 p-4  bg-gray-100 dark:bg-gray-900 border-0 rounded-full shadow-xl">
-        <a href="https://www.linkedin.com/in/kenneth-feierstein-4b5376115/" target="_blank"><FaLinkedin className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-blue-500 hover:text-blue-600`} /></a>
-        <a href="https://github.com/Feierstein1" target="_blank"><FaGithub className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-violet-500 hover:text-violet-600`} /></a>
+        <a href="https://www.linkedin.com/in/kenneth-feierstein-4b5376115/" rel="noopener noreferrer" target="_blank"><FaLinkedin className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-blue-500 hover:text-blue-600`} /></a>
+        <a href="https://github.com/Feierstein1" rel="noopener noreferrer" target="_blank"><FaGithub className={`text-3xl transition duration-500 ease-in-out hover:scale-110 text-violet-500 hover:text-violet-600`} /></a>
         <ResumeLink/>
       </div>
     </>

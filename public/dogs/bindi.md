@@ -1,0 +1,16 @@
+- **Name**: Bindi
+- **Named after**: Bindi Irwin, Steve Irwins daughter
+- **Breed**: Toy Austalian Shephard 
+- **Coat Color**: Black and White
+- **Eye Color**: Blue and brown eyes
+- **Gender**: Female
+- **Date of Birth**: 12/23/2020 
+- **Weight**: 30lbs
+- **Favorite Toy**: toy squirrel 
+- **Favorite Food**: Almost everything
+- **Personality**: Friendly, loves meeting new people, going to the dog park and chasing dogs, very intelligent, a bit anxious, very sweet, loves to bark at animals on the tv 
+- **Fears**: Cats, big dogs, loud children, motorcycles
+- **Favorite activities**: chasing squirrels, going on walks, going to the park, going on car rides, going to her favorite bars with people she knows 
+- **Health Notes**: Is Spayed, up to date on all shots, does not have complications
+- **Random facts**: Loves to watch tv and bark at animals
+- **Tricks**: sit and stay, spin around, speak
