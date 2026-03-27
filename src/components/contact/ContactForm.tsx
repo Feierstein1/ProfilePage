@@ -41,9 +41,17 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch("https://us-central1-portfolio-c207f.cloudfunctions.net/contactForm", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      // const response = await fetch("https://us-central1-portfolio-c207f.cloudfunctions.net/contactForm", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData),
+      // });
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(formData),
       });
 

@@ -28,9 +28,9 @@ const Profile = () => {
             <Image
               src="/profilePic.png"
               alt="Profile Picture"
-              width={320}
-              height={320}
-              className="object-cover border-0 rounded-full shadow-xl w-64 h-64 md:w-80 md:h-80"
+              width={200}
+              height={200}
+              className="object-cover mt-3 border-0 rounded-full shadow-xl w-50 h-50 md:w-60 md:h-60"
             />
 
             <AccountLinks />
