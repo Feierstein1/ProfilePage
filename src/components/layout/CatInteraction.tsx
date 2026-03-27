@@ -11,12 +11,28 @@ interface CatInteractionProps {
 export default function CatInteraction({ cat }: CatInteractionProps) {
   const [headVisible, setHeadVisible] = useState(false);
   const [swipe, setSwipe] = useState(false);
-  const [mouseY, setMouseY] = useState(0); // Restore mouseY state
+  const [mouseY, setMouseY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true); // 👈 NEW
 
+  // ✅ Handle screen size
   useEffect(() => {
+    const handleResize = () => {
+      setIsVisible(window.innerWidth >= 1250);
+    };
+
+    handleResize(); // run on mount
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // ✅ Mouse logic (only runs if visible)
+  useEffect(() => {
+    if (!isVisible) return; // 🚨 stops everything when hidden
+
     const handleMouseMove = (e: MouseEvent) => {
       const mouseX = e.clientX;
-      const newMouseY = e.clientY; 
+      const newMouseY = e.clientY;
 
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
@@ -41,18 +57,20 @@ export default function CatInteraction({ cat }: CatInteractionProps) {
         setHeadVisible(isHeadVisible);
       }
 
-      // Swipe logic (combined for left and right)
       if ((cat.side === "right" ? mouseX > swipeZone : mouseX < swipeZone) && isHeadVisible && !swipe) {
         setSwipe(true);
         setTimeout(() => setSwipe(false), 500);
       }
 
-      setMouseY(newMouseY); // Update mouseY state
+      setMouseY(newMouseY);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [swipe, cat]);
+  }, [swipe, cat, isVisible, headVisible]);
+
+  // ✅ Don't render at all if screen too small
+  if (!isVisible) return null;
 
   return (
     <div className={cat.containerClass}>
@@ -69,6 +87,7 @@ export default function CatInteraction({ cat }: CatInteractionProps) {
           transition={cat.catArm.transition}
         />
       )}
+
       {/* Cat Head */}
       <motion.img
         src={cat.catHead.src}
@@ -79,7 +98,9 @@ export default function CatInteraction({ cat }: CatInteractionProps) {
         initial={cat.catHead.initial}
         animate={{ 
           x: headVisible ? cat.catHead.animate.x1 : cat.catHead.animate.x2, 
-          y: headVisible ? mouseY / cat.catHead.animate.y1 - cat.catHead.animate.y2 : 50, 
+          y: headVisible 
+            ? mouseY / cat.catHead.animate.y1 - cat.catHead.animate.y2 
+            : 50, 
         }}
         transition={cat.catHead.transition}
       />

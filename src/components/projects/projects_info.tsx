@@ -1,23 +1,31 @@
 export const projectsArr = [
-  {
-    title: "Profile Website",
-    url: "", 
-    description: "This personal portfolio website showcases my projects and skills. Built using Next.js, React, and TailwindCSS, the site is hosted on Firebase and incorporates Firebase Functions for dynamic interaction.",
-    descriptionList: [
-      "Designed and developed responsive, mobile-friendly components for seamless browsing",
-      "Leveraged Next.js routing for efficient URL management and navigation",
-      "Integrated Firebase Functions to handle HTTP requests, enabling dynamic functionality from static pages",
-      "Crafted a visually appealing and user-friendly interface using TailwindCSS"
-    ],
-    stack: [
-      "JavaScript",
-      "React",
-      "Next.js",
-      "Node.js",
-      "TailwindCSS",
-      "Firebase",
-    ],
-  },
+ {
+  title: "ContractAI",
+  url: "https://github.com/Feierstein1/contractAI", 
+  description: "AI-powered contract analysis platform that processes uploaded documents through a multi-agent pipeline to identify risks and generate structured, actionable insights.",
+  descriptionList: [
+    "Implemented secure authentication using NextAuth with OAuth and credential-based login backed by MongoDB.",
+    "Built an interactive client UI allowing users to upload contracts, select LLM providers/models, and view token-based cost estimates.",
+    "Designed and integrated AWS S3 storage for secure file handling, organization, and controlled access.",
+    "Developed a Python FastAPI backend to orchestrate LLM workflows and RESTful API communication.",
+    "Engineered multi-agent processing pipelines using CrewAI to analyze contracts and return structured outputs via Pydantic schemas.",
+    "Stored dynamic analysis results in a NoSQL database and rendered UI components based on structured output keys.",
+    "Implemented history tracking for uploaded contracts and generated insights."
+  ],
+  stack: [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "FastAPI",
+    "CrewAI",
+    "React",
+    "Redux",
+    "Next.js",
+    "NextAuth",
+    "Node.js",
+    "AWS (S3)"      
+  ],
+},
   {
     title: "DCFpro.com",
     image: "/dcfpro.png",
@@ -60,6 +68,26 @@ export const projectsArr = [
       "Node.js",
       "MongoDB",
       "JWT"
+    ],
+  },
+    {
+    title: "Profile Website",
+    url: "", 
+    description: "This personal portfolio website showcases my projects and skills. Built using Next.js, React, and TailwindCSS, the site is hosted on Firebase and incorporates Firebase Functions for dynamic interaction.",
+    descriptionList: [
+      "Designed and developed responsive, mobile-friendly components for seamless browsing",
+      "Leveraged Next.js routing for efficient URL management and navigation",
+      "Integrated Firebase Functions to handle HTTP requests, enabling dynamic functionality from static pages",
+      "Crafted a visually appealing and user-friendly interface using TailwindCSS"
+    ],
+    stack: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "TailwindCSS",
+      "Firebase",
     ],
   },
 ];

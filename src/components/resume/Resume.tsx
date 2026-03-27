@@ -51,9 +51,8 @@ const Header = () => {
         <h1 className="text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100">Kenny Feierstein</h1>
         <p className="text-sm text-gray-600 sm:text-lg dark:text-gray-300">
           Software Engineer <b className="text-blue-500">| </b> 
-          Agile Experience <b className="text-blue-500">| </b> 
           Full Stack <b className="text-blue-500">| </b> 
-          Node.js
+          Cybersecurity & Infrastructure
         </p>
       </div>
     </>
@@ -66,9 +65,10 @@ const Summary = () => {
       <section>
         <h2 className={`${titleStyle}`}>Summary</h2>
         <p className="text-sm sm:text-lg mt-4 text-gray-700 dark:text-gray-300">
-          <b className="tracking-widest">SOFTWARE ENGINEER (FULL STACK)</b> with extensive experience developing and maintaining technical systems in Agile environments. 
-          Skilled in synthesizing complex information, collaborating with cross-functional teams, and delivering solutions that achieve key performance indicators. 
-          Proven ability to excel in autonomous and remote work settings while leveraging front-end, back-end, and server-side technologies.
+          <b className="tracking-widest">SOFTWARE ENGINEER (FULL STACK)</b> with 10+ years of experience designing, migrating, and maintaining production web systems
+           with a strong focus on infrastructure security, microservices, access control, database integrity, secure system design, and operational pipelines. 
+           Hands-on experience managing Linux servers, cloud infrastructure (GCP; expanding to AWS), SQL and NoSQL databases, RESTful API integration, secure migrations,
+            operational automation, and front-end design for modern and legacy websites. 
         </p>
       </section>
     </>
@@ -139,6 +139,14 @@ const Education = () => {
             <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">Bachelor of Science</h3>
             <h2 className="text-sm sm:text-lg">Information Science (Computer Science Program)</h2>
             <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-400">University of North Florida | 2018</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 className={`${titleStyle}`}>Certifications</h2>
+        <div className="flex justify-start">
+          <div className="mt-4">
+            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">CompTIA Security+ (SY0-701)</h3>
           </div>
         </div>
       </section>
