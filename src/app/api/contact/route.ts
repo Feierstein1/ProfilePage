@@ -1,18 +1,22 @@
+import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const receiverEmail = process.env.RECEIVER_EMAIL as string;
-
-if (!receiverEmail) {
-  throw new Error("Missing RECEIVER_EMAIL environment variable");
-}
-
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const receiverEmail = process.env.RECEIVER_EMAIL as string;
+
+    if (!receiverEmail) {
+      throw new Error("Missing RECEIVER_EMAIL environment variable");
+    }
+
     const { name, email, subject, message } = await req.json();
 
     if (!name || !email || !message) {
-      return Response.json({ error: "Missing required fields" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
     }
 
     await resend.emails.send({
@@ -30,8 +34,12 @@ export async function POST(req: Request) {
       `,
     });
 
-    return Response.json({ success: true });
-  } catch (error) {
-    return Response.json({ error: 'Failed to send email' }, { status: 500 });
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    console.error("Error sending email:", err);
+    return NextResponse.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
   }
 }
