@@ -4,12 +4,7 @@ import Profile from '../components/profile/Profile'
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-centerspace-y-6 inset-0 bg-city bg-top mix-blend-overlay" style={{
-        backgroundImage: "url('/city-background.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh",
-      }}>
+    <div className="flex flex-col inset-0 bg-city bg-top mix-blend-overlay">
         <Profile/>
     </div>
   );

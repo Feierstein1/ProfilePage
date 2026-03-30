@@ -56,7 +56,7 @@ export default {
         buttonHoverBg: "var(--button-hover-bg)",
       },
       backgroundImage: {
-        'city': "url('/public/city-background.jpg')"
+        'city': "url('/city-background.jpg')"
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
