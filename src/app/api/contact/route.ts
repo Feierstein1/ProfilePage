@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     }
 
     await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
+      from: 'Portfolio Contact <contact@kfeier.com>',
       to: [receiverEmail],
       subject: `[Portfolio] ${subject || "No Subject"} - from ${name}`,
       replyTo: email,
